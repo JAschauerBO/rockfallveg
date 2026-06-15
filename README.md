@@ -19,5 +19,5 @@ Use this package like this:
 raw_tiffs <- rfv.import_tiff(raw_data_dir = "C:/Users/jakob/Uni/Erasmus/Telerilevamento/Esame/WD/Raw Data")
 roi <- rfv.import_roi(wd_dir = "C:/Users/jakob/Uni/Erasmus/Telerilevamento/Esame/WD")
 ndvi_list <- rfv.ndvi(imported_tiffs = raw_tiffs)
-rfv.crop(ndvi_list = ndvi_list, roi = roi)
+v_ndvi_df <- rfv.crop(ndvi_list = ndvi_list, roi = roi)
 ```
