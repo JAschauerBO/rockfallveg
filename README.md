@@ -5,5 +5,6 @@ rockfallveg is a small R package, that analyses the vegetation on rockfall bodie
 Install this package in R with the command
 
 ```r
-install_github("JAschauerBO/rockfallveg")
+install.packages("remotes")
+remotes::install_github("JAschauerBO/rockfallveg")
 ```
