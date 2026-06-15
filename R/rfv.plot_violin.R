@@ -45,7 +45,7 @@ rfv.plot_violin <- function(v_ndvi_df = NULL,
 
   if (!requireNamespace("ggplot2", quietly = TRUE)) stop("ggplot2 required for plotting. Please install it.", call. = FALSE)
 
-  p <- ggplot2::ggplot(long, ggplot2::aes_string(x = "variable", y = "value", fill = "variable")) +
+  p <- ggplot2::ggplot(long, ggplot2::aes(x = variable, y = value, fill = variable)) +
     ggplot2::geom_violin(scale = scale, trim = TRUE)
 
   if (isTRUE(show_points)) {
