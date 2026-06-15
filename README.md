@@ -7,4 +7,7 @@ Install this package in R with the command
 ```r
 install.packages("remotes")
 remotes::install_github("JAschauerBO/rockfallveg")
+
+# Load package:
+library(rockfallveg)
 ```
