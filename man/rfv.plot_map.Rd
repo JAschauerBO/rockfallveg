@@ -3,7 +3,7 @@
 \title{Plot NDVI rasters in a multi-panel layout}
 \description{Draw multiple NDVI rasters as a grid of maps and optionally overlay the ROI boundary.}
 \usage{
-rfv.plot_map(ndvi_list = NULL, data_path = "WD/ndvi_all.rds", series = NULL, roi = NULL, output_dir = "WD", ncol = 3, nrow = NULL, main = NULL, labels = NULL, col_palette = terrain.colors(50), zlim = NULL, add_roi_border = TRUE, save_plot = NULL, width = 10, height = 7, res = 150)
+rfv.plot_map(ndvi_list = ndvi_list, data_path = "WD/ndvi_all.rds", series = NULL, roi = roi, output_dir = "WD", ncol = 3, nrow = NULL, main = NULL, labels = NULL, col_palette = terrain.colors(50), zlim = NULL, add_roi_border = TRUE, save_plot = NULL, width = 10, height = 7, res = 150)
 }
 \arguments{
   \item{ndvi_list}{Named list of \code{SpatRaster} objects, or \code{NULL} to read \code{ndvi_all.rds}.}
