@@ -10,6 +10,9 @@ remotes::install_github("JAschauerBO/rockfallveg")
 
 # Load package:
 library(rockfallveg)
+
+# Uninstall:
+remove.packages("rockfallveg")
 ```
 
 # Usage
@@ -24,4 +27,5 @@ v_ndvi_df <- rfv.crop(ndvi_list = ndvi_list, roi = roi)
 print(rfv.plot_box())
 print(rfv.plot_violin())
 print(rfv.plot_RGB(rast = raw_tiffs[["YYYYMM"]]$stack))
+print(rfv.plot_map())
 ```
