@@ -19,10 +19,10 @@
 ##' @param res resolution (DPI) for saved PNG
 ##' @return list with `series` and `saved` flag (invisible)
 ##' @export
-rfv.plot_map <- function(ndvi_list = ndvi_list,
+rfv.plot_map <- function(ndvi_list = NULL,
                          data_path = "WD/ndvi_all.rds",
                          series = NULL,
-                         roi = roi,
+                         roi = NULL,
                          output_dir = "WD",
                          ncol = 3,
                          nrow = NULL,
