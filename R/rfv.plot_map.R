@@ -50,6 +50,12 @@ rfv.plot_map <- function(ndvi_list = ndvi_list,
   nplots <- length(plots)
   if (is.null(nrow)) nrow <- ceiling(nplots / ncol)
 
+  if (is.null(zlim)) {
+    global_min <- min(sapply(plots, function(r) min(terra::values(r), na.rm = TRUE)))
+    global_max <- max(sapply(plots, function(r) max(terra::values(r), na.rm = TRUE)))
+    zlim <- c(global_min, global_max)
+  }
+
   if (is.null(roi)) {
     roi_path <- file.path(output_dir, "roi.rds")
     if (file.exists(roi_path)) roi <- readRDS(roi_path)
@@ -72,11 +78,7 @@ rfv.plot_map <- function(ndvi_list = ndvi_list,
       plot.new(); title(main = paste(lbl, "(not a raster)")); next
     }
 
-    if (is.null(zlim)) {
-      terra::plot(r, col = col_palette, main = lbl)
-    } else {
-      terra::plot(r, col = col_palette, main = lbl, zlim = zlim)
-    }
+    terra::plot(r, col = col_palette, main = lbl, zlim = zlim)
 
     if (add_roi_border && !is.null(roi) && inherits(roi, "SpatVector")) {
       terra::plot(roi, add = TRUE, border = "red", lwd = 2)
