@@ -3,7 +3,7 @@
 \title{Plot NDVI violins}
 \description{Create violin plots from the NDVI value data frame and optionally save the figure.}
 \usage{
-rfv.plot_violin(v_ndvi_df = NULL, data_path = "WD/v_ndvi_df.rds", series = NULL, ylim = NULL, xlab = "Date", ylab = "NDVI", title = NULL, scale = "area", show_points = TRUE, point_size = 0.5, palette = NULL, save_plot = NULL)
+rfv.plot_violin(v_ndvi_df = NULL, data_path = "WD/v_ndvi_df.rds", series = NULL, ylim = NULL, xlab = "Date", ylab = "NDVI", title = NULL, scale = "area", show_points = FALSE, point_size = 0.5, palette = NULL, save_plot = NULL)
 }
 \arguments{
   \item{v_ndvi_df}{Data frame with NDVI value vectors as columns, or \code{NULL} to read \code{v_ndvi_df.rds}.}
