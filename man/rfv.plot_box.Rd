@@ -3,7 +3,7 @@
 \title{Plot NDVI boxplots}
 \description{Create boxplots from the NDVI value data frame and optionally save the figure.}
 \usage{
-rfv.plot_box(v_ndvi_df = NULL, data_path = "WD/v_ndvi_df.rds", series = NULL, ylim = c(0, 0.6), xlab = "Date", ylab = "NDVI", title = NULL, notch = FALSE, show_points = TRUE, point_size = 0.5, palette = NULL, save_plot = NULL)
+rfv.plot_box(v_ndvi_df = NULL, data_path = "WD/v_ndvi_df.rds", series = NULL, ylim = c(0, 0.6), xlab = "Date", ylab = "NDVI", title = NULL, notch = FALSE, show_points = FALSE, point_size = 0.5, palette = NULL, save_plot = NULL)
 }
 \arguments{
   \item{v_ndvi_df}{Data frame with NDVI value vectors as columns, or \code{NULL} to read \code{v_ndvi_df.rds}.}
