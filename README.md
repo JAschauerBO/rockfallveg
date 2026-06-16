@@ -25,7 +25,7 @@ ndvi_list <- rfv.ndvi(imported_tiffs = raw_tiffs)
 v_ndvi_df <- rfv.crop(ndvi_list = ndvi_list, roi = roi)
 
 print(rfv.plot_box())
-print(rfv.plot_violin())
+print(rfv.plot_violin(scale = "width"))
 print(rfv.plot_RGB(rast = raw_tiffs[["YYYYMM"]]$stack))
 print(rfv.plot_map())
 ```
